@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <script type="text/javascript" src="js/scripts.js" defer></script>
+
+    <style>
+        .game-container{
+            display:flex;
+            flex-direction: column;
+        }
+        .game{
+            display: flex;
+            flex-direction: row;
+        }
+        .score-panel{
+            font-size: xx-large;
+            padding-top: 20vh;  
+            padding-left: 12vw;
+            width:100%;
+        }
+        .toggle{
+            display: flex;
+            flex-direction: column;
+        }
+        .setting-item{
+            padding:10px
+        }
+        
+    </style>
+</head>
+
+
+<body>
+    <div class="game-container">
+        <div class="game">
+            <canvas id="context" width="800" height="600">
+            </canvas>
+            <div class="score-panel">
+                <div class="score-container center"></div>
+            </div>
+        </div>
+        <div class="toggle">
+            <div class="setting-item">
+                <label for="points">Play / Pause</label>
+                <button onclick="togglePlay()">Play/Pause</button>
+            </div>
+            <div class="setting-item">
+                <label for="points">Ball Speed</label>
+                <input type="number" id="ballsSpeed" name="ballSpeed" step="2" width="10">
+            </div>
+            <div class="setting-item">
+                <label for="score">Reset Score</label>
+                <button onclick="resetScore()">Reset Score</button>
+            </div>
+            <div class="setting-item">
+                <label for="AI">Toggle AI</label>
+                <button class="ai-button" onclick="toggleAI()">Toggle AI</button>
+            </div>
+            <div class="setting-item">
+                <label for="ace">Ace?</label>
+                <button class="ace" onclick="enableAce()">Ace</button>
+                <input type="number" id="aceNumber" name="ace" step="0.1" width="10">
+            </div>
+        </div>
+    </div>
+    
+
+</body>
+
+
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "smart-arkanoid",
+  "version": "1.0.0",
+  "description": "a small game with configurable complexities",
+  "main": "scripts.js",
+  "scripts": {
+    "dev": "tsc --project ./tsconfig.json -w",
+    "build": "tsc --project ./tsconfig.json",
+    "serve": "http-server ./public",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "vaibhav sharma",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}
