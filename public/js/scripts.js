@@ -104,7 +104,7 @@ function reset() {
     xv = -xv;
     yv = defaultBallSpeedY;
     clearInterval(gameLogameLoopToggle);
-    gameLogameLoopToggle = null;
+    gameLogameLoopToggle = 0;
     gameLoop();
 }
 function resetScore() {
@@ -124,7 +124,7 @@ function toggleAI() {
 function togglePlay() {
     if (gameLogameLoopToggle) {
         clearInterval(gameLogameLoopToggle);
-        gameLogameLoopToggle = null;
+        gameLogameLoopToggle = 0;
         return;
     }
     gameLogameLoopToggle = setInterval(gameLoop, 1000 / 30);
